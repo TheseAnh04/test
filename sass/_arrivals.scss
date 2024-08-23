@@ -1,0 +1,262 @@
+.arrivals-container {
+    max-width: 1410px;
+    text-align: center;
+    margin: 100px auto;
+    
+    .arrivals-title {
+        font-size: 45px;
+        line-height: 65.03px;
+        font-weight: 400;
+    }
+    
+    .arrivals-subtitle {
+        padding-top: 25px;
+        font-size: 16px;
+        line-height: 23.12px;
+        font-weight: 400;
+    }
+    
+    .arrivals-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        max-width: 900px;
+        text-align: center;
+
+        .arrivals-item {
+            width: 330px;
+            margin-top: 40px;
+            overflow: hidden;
+            position: relative;
+            
+            img {
+                width: 100%;
+            }
+            
+            .sold-out {
+                position: absolute;
+                top: 15px;
+                left: 15px;
+                background-color: $sold-out-bg;
+                color: white;
+                padding: 5px 10px;
+                border-radius: 15px;
+                font-size: 14px;
+            }
+            
+            .tag-sale {
+                position: absolute;
+                top: 15px;
+                left: 15px;
+                
+                .tag {
+                    background-color: #D73F0F;
+                    border-radius: 30px;
+                    width: 50px;
+                    height: 25px;
+                    line-height: 25px;
+                    color: #FFFFFF;
+                    font-size: 13px;
+                    font-weight: 400;
+                }
+                
+                .pre-order {
+                    margin-top: 3px;
+                    background-color: #177983;
+                    border-radius: 30px;
+                    width: 75px;
+                    height: 25px;
+                    line-height: 25px;
+                    color: #FFFFFF;
+                    font-size: 13px;
+                    font-weight: 400;
+                }
+            }
+            
+            .info-item {
+                padding: 15px 0;
+                text-align: left;
+            }
+            
+            .item-name {
+                font-size: 18px;
+                margin-bottom: 10px;
+                font-weight: 400;
+            }
+            
+            .item-rating {
+                font-size: 16px;
+                margin-bottom: 10px;
+            }
+            
+            .price {
+                font-size: 14px;
+                color: #333;
+                margin: 8px 0;
+                font-weight: 500;
+            }
+            
+            .sale-price {
+                margin: 8px 0;
+                display: flex;
+                gap: 10px;
+                
+                .price-new {
+                    font-size: 14px;
+                    color: #D73F0F;
+                    font-weight: 500;
+                }
+                
+                .price-old {
+                    font-size: 14px;
+                    color: #999999;
+                    font-weight: 500;
+                    text-decoration: line-through;
+                }
+            }
+            
+            .colors {
+                display: flex;
+                justify-content: left;
+                gap: 10px;
+                margin-bottom: 10px;
+                
+                .color-border-1 {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    border: 1px solid #111111;
+                    
+                    .color-circle {
+                        width: 25px;
+                        height: 25px;
+                        border-radius: 50%;
+                        cursor: pointer;
+                        
+                        &.rgba-1 {
+                            background-color: $color-1;
+                        }
+                        
+                        &.rgba-4 {
+                            background-color: $color-4;
+                        }
+                        
+                        &.rgba-7 {
+                            background-color: $color-7;
+                        }
+                    }
+                }
+                
+                .color-border {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    border: 1px solid #DDDDDD;
+                    
+                    .color-circle {
+                        width: 25px;
+                        height: 25px;
+                        border-radius: 50%;
+                        cursor: pointer;
+                        
+                        &.rgba-2 {
+                            background-color: $color-2;
+                        }
+                        
+                        &.rgba-3 {
+                            background-color: $color-3;
+                        }
+                        
+                        &.rgba-5 {
+                            background-color: $color-5;
+                        }
+                        
+                        &.rgba-6 {
+                            background-color: $color-6;
+                        }
+                        
+                        &.rgba-8 {
+                            background-color: $color-8;
+                        }
+                        
+                        &.rgba-9 {
+                            background-color: $color-9;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .arrivals-container {
+        .arrivals-title {
+            font-size: 36px;
+            line-height: 50px; 
+        }
+        
+        .arrivals-subtitle {
+            padding-top: 20px;
+            font-size: 14px;
+            line-height: 20px;
+        }
+        
+        .arrivals-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 100%; 
+            
+            .arrivals-item {
+                width: 100%; 
+                margin-top: 20px; 
+                img {
+                    width: 100%; 
+                }
+                
+                .sold-out, .tag-sale .tag, .tag-sale .pre-order {
+                    font-size: 12px; 
+                    padding: 4px 8px; 
+                    border-radius: 12px; 
+                }
+                
+                .info-item {
+                    padding: 10px 0;
+                }
+                
+                .item-name {
+                    font-size: 16px; 
+                    margin-bottom: 8px; 
+                }
+                
+                .item-rating {
+                    font-size: 14px; 
+                }
+                
+                .price, .sale-price {
+                    font-size: 12px; 
+                }
+                
+                .colors {
+                    gap: 8px;
+                    
+                    .color-border-1, .color-border {
+                        width: 25px; 
+                        height: 25px; 
+                        
+                        .color-circle {
+                            width: 20px; 
+                            height: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
